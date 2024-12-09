@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F4F6FF; /* Culoarea de fundal actualizată */
+    color: #050B20;
+    overflow-x: hidden; /* Previne scroll-ul orizontal */
+
+    /* Scrollbar personalizat pentru Firefox */
+    scrollbar-width: thin; /* Subțire */
+    scrollbar-color: rgba(255, 255, 255, 0.4) transparent; /* Thumb și canal transparent */
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.header-actions a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.submit-listing {
+    background-color: white;
+    color: #050B20;
+}
+
+.submit-listing:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh; /* Ocupă 100% din înălțimea ecranului */
+    background: url('pictures/car.jpg') no-repeat center center; /* Fundal fără repetare */
+    background-size: cover; /* Fundalul se ajustează pentru a acoperi spațiul */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    overflow: hidden;
+}
+
+.hero-content {
+    color: white;
+    max-width: 400px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.info-box {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 250px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-title {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.info-detail {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info-button a {
+    display: block;
+    text-align: center;
+    background-color: white;
+    color: #050B20;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Scrollbar personalizat pentru Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px; /* Lățimea scrollbar-ului */
+    height: 10px; /* În cazul scroll-ului orizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Fără fundal pentru canal */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4); /* Thumb semi-transparent */
+    border-radius: 5px; /* Colțuri rotunjite pentru un aspect modern */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Thumb mai vizibil la hover */
+}
+
+/* Secțiunea SUV */
+.suv-section {
+    width: 100%;
+    background-color: #FFFFFF; /* Fundal alb */
+    padding: 20px 0; /* Spațiere sus și jos */
+}
+
+.suv-container {
+    width: 1100px; /* Lățimea secțiunii */
+    margin: 0 auto; /* Centrează secțiunea */
+    display: flex;
+    justify-content: space-between; /* Distribuie conținutul */
+    align-items: center; /* Aliniere pe verticală */
+}
+
+.suv-container h2 {
+    font-size: 24px;
+    color: #050B20; /* Culoare text */
+    font-weight: bold;
+}
+
+.suv-container .view-all {
+    text-decoration: none;
+    font-size: 14px;
+    color: #050B20; /* Culoare link */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.suv-container .view-all:hover {
+    color: #31511E; /* Culoare la hover */
+}
+
+/* Secțiunea pentru cele mai vizualizate mașini */
+.most-viewed-cars {
+    width: 100%;
+    padding: 40px 0; /* Spațiere sus și jos */
+    background-color: #f9f9f9; /* Fundal deschis */
+}
+
+.container {
+    width: 1100px; /* Lățimea secțiunii */
+    margin: 0 auto; /* Centrează secțiunea pe pagină */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 coloane egale */
+    gap: 20px; /* Spațiu egal între dreptunghiuri */
+}
+
+.car-card {
+    background-color: #ffffff; /* Fundal alb pentru card */
+    border-radius: 16px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră discretă */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #050B20; /* Text de culoare închisă */
+    height: 350px; /* Înălțimea fiecărui card */
+    text-align: center;
+}
+
+/* Secțiunea pentru cardurile mari de anunțuri */
+.announcement-section {
+    width: 100%;
+    background-color: #f5f5f5; /* Fundal deschis */
+    padding: 40px 0; /* Spațiu sus și jos */
+}
+
+.announcement-container {
+    width: 1100px; /* Lățimea secțiunii */
+    margin: 0 auto; /* Centrează secțiunea */
+    display: flex;
+    justify-content: space-between; /* Distanță egală între carduri */
+    gap: 20px; /* Spațiu între carduri */
+}
+
+.announcement-card {
+    background-color: #e9ecef; /* Fundal gri deschis */
+    border-radius: 16px; /* Colțuri rotunjite */
+    padding: 20px;
+    width: 650px; /* Lățimea fixă */
+    height: 250px; /* Înălțimea fixă */
+    display: flex;
+    flex-direction: column; /* Elemente aranjate vertical */
+    justify-content: space-between; /* Spațiu între titlu, text și buton */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră discretă */
+}
+
+.announcement-card h3 {
+    font-size: 20px;
+    color: #050B20;
+    font-weight: bold;
+}
+
+.announcement-card p {
+    font-size: 16px;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+.announcement-button {
+    background-color: #3E7B29; /* Verde pentru buton */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Butonul rămâne pe stânga */
+}
+
+.announcement-button:hover {
+    background-color: #2b5d1f; /* Schimbare de culoare la hover */
+}
