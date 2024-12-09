@@ -65,67 +65,62 @@ body {
 
 /* Hero Section */
 .hero {
-    position: relative;
-    height: 100vh; /* Ocupă 100% din înălțimea ecranului */
-    background: url('pictures/car.jpg') no-repeat center center; /* Fundal fără repetare */
-    background-size: cover; /* Fundalul se ajustează pentru a acoperi spațiul */
+    background: url('pictures/promovare.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
-    overflow: hidden;
-}
-
-.hero-content {
-    color: white;
-    max-width: 400px;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.hero-content h2 {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.info-box {
-    position: absolute;
-    top: 20%;
-    right: 5%;
-    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 15px;
-    backdrop-filter: blur(10px);
-    width: 250px;
 }
 
-.info-item {
-    margin-bottom: 20px;
-}
-
-.info-title {
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-.info-detail {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.info-button a {
-    display: block;
+.hero-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
     text-align: center;
-    background-color: white;
-    color: #050B20;
-    text-decoration: none;
+    color: #fff;
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+select, input[type="range"], button {
     padding: 10px;
     border-radius: 5px;
-    margin-top: 20px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    background: #EB8317;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d47114;
 }
 
 /* Scrollbar personalizat pentru Webkit (Chrome, Edge, Safari) */
@@ -150,7 +145,7 @@ body {
 /* Secțiunea SUV */
 .suv-section {
     width: 100%;
-    background-color: #FFFFFF; /* Fundal alb */
+    background-color: #10375C; /* Fundal alb */
     padding: 20px 0; /* Spațiere sus și jos */
 }
 
@@ -164,7 +159,7 @@ body {
 
 .suv-container h2 {
     font-size: 24px;
-    color: #050B20; /* Culoare text */
+    color: #FBFBFB; /* Culoare text */
     font-weight: bold;
 }
 
@@ -187,7 +182,8 @@ body {
 .most-viewed-cars {
     width: 100%;
     padding: 40px 0; /* Spațiere sus și jos */
-    background-color: #f9f9f9; /* Fundal deschis */
+    background-color: #F4F6FF; /* Fundal deschis */
+    
 }
 
 .container {
@@ -214,8 +210,9 @@ body {
 /* Secțiunea pentru cardurile mari de anunțuri */
 .announcement-section {
     width: 100%;
-    background-color: #f5f5f5; /* Fundal deschis */
+    background-color: #F4F6FF; /* Fundal deschis */
     padding: 40px 0; /* Spațiu sus și jos */
+    margin-bottom: 50px;
 }
 
 .announcement-container {
@@ -264,4 +261,302 @@ body {
 
 .announcement-button:hover {
     background-color: #2b5d1f; /* Schimbare de culoare la hover */
+}
+
+/* Popular Makes Section */
+.popular-makes-section {
+    position: relative; /* Pentru poziționarea absolută a cercurilor */
+    width: 100%;
+    background-color: #10375C; /* Fundal albastru închis */
+    padding: 40px 0;
+}
+
+.popular-makes-container {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative; /* Pentru cercurile de navigare */
+}
+
+.popular-makes-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.line {
+    height: 4px;
+    width: 100px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+.popular-makes-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 coloane egale */
+    gap: 20px; /* Spațiu între dreptunghiuri */
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #FFFFFF; /* Fundal alb */
+    border-radius: 16px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră discretă */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #050B20; /* Text de culoare închisă */
+    height: 350px; /* Înălțimea fiecărui card (la fel ca Most Viewed Cars) */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efect de hover */
+}
+
+/* Stiluri pentru cercurile de navigație */
+.circle-nav {
+    position: absolute;
+    top: 50%; /* Centrează pe verticală */
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    z-index: 10; /* Peste alte elemente */
+}
+
+.circle-nav:hover {
+    background-color: #FFFFFF; /* Cerc plin la hover */
+    color: #10375C; /* Culoare săgeată contrastantă */
+}
+
+.circle-nav.left {
+    left: -70px; /* Poziționează în afara containerului pe stânga */
+}
+
+.circle-nav.right {
+    right: -70px; /* Poziționează în afara containerului pe dreapta */
+}
+
+.arrow {
+    font-weight: bold;
+}
+
+/* FAQ Section */
+.faq-section {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #F4F6FF;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.faq-title {
+    font-size: 24px;
+    color: #10375C;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.faq-item {
+    border-bottom: 1px solid #10375C;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #10375C;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    color: #10375C;
+    padding-left: 10px;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 150px; /* Ajustează înălțimea pentru conținut mai mare */
+    opacity: 1;
+}
+
+.faq-toggle {
+    font-size: 20px;
+    color: #EB8317;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-toggle {
+    transform: rotate(45deg); /* Transformă + în - */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #10375C; /* Fundal albastru */
+    color: white;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-left h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-contact .contact-item {
+    margin-bottom: 10px;
+}
+
+.footer-middle {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #EB8317; /* Turcoaz devine portocaliu */
+}
+
+.footer-right {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-right h4 {
+    margin-bottom: 15px;
+}
+
+.footer-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.footer-right form button {
+    background-color: #EB8317; /* Buton portocaliu */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-right form button:hover {
+    background-color: #d67415; /* Buton portocaliu mai închis */
+}
+
+.footer-apps button {
+    background-color: #F4F6FF;
+    color: #10375C;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+.footer-apps button:hover {
+    background-color: #EB8317;
+    color: white;
+}
+
+.footer-socials a {
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-socials a:hover {
+    color: #EB8317;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #EB8317;
 }

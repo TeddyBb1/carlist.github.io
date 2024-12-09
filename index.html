@@ -28,30 +28,45 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>$165,000</h1>
-            <h2>Volvo XC90</h2>
+        <div class="hero-container">
+            <h1>Let’s Find Your Perfect Car</h1>
+            <form class="search-form">
+                <div class="form-group">
+                    <label>
+                        <input type="radio" name="car-type" value="new" checked>
+                        New
+                    </label>
+                    <label>
+                        <input type="radio" name="car-type" value="used">
+                        Used
+                    </label>
+                </div>
+                <div class="form-group">
+                    <select name="makes">
+                        <option value="audi">Audi</option>
+                        <option value="bmw">BMW</option>
+                    </select>
+                    <select name="models">
+                        <option value="q7">Q7</option>
+                        <option value="x5">X5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price">Select Price</label>
+                    <input type="range" id="price" min="0" max="250000" step="1000">
+                </div>
+                <button type="submit">Search</button>
+            </form>
         </div>
-        <div class="info-box">
-            <div class="info-item">
-                <p class="info-title">Fuel Type</p>
-                <p class="info-detail">Petrol</p>
-            </div>
-            <div class="info-item">
-                <p class="info-title">Mileage</p>
-                <p class="info-detail">250 Miles</p>
-            </div>
-            <div class="info-item">
-                <p class="info-title">Transmission</p>
-                <p class="info-detail">Manual</p>
-            </div>
-            <div class="info-item">
-                <p class="info-title">Year</p>
-                <p class="info-detail">2021</p>
-            </div>
-            <div class="info-button">
-                <a href="#">Learn More</a>
-            </div>
+    </section>
+    
+    
+
+    <!-- Most Searched SUV Cars -->
+    <section class="suv-section">
+        <div class="suv-container">
+            <h2>The Most Searched SUV Cars</h2>
+            <a href="#" class="view-all">View All →</a>
         </div>
     </section>
 
@@ -87,5 +102,160 @@
             </div>
         </div>
     </section>
-</body>
-</html>
+
+    <!-- Popular Makes Section -->
+<section class="popular-makes-section">
+    <div class="popular-makes-container">
+        <h2 class="popular-makes-title">Popular Makes</h2>
+        <div class="line"></div>
+        <div class="popular-makes-cards">
+            <div class="card">Popular Car 1</div>
+            <div class="card">Popular Car 2</div>
+            <div class="card">Popular Car 3</div>
+            <div class="card">Popular Car 4</div>
+        </div>
+
+        <!-- Navigație stânga și dreapta -->
+        <button class="circle-nav left"><span class="arrow">←</span></button>
+        <button class="circle-nav right"><span class="arrow">→</span></button>
+    </div>
+</section>
+
+<section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <div class="faq-question">
+            Does BoxCar own the cars I see online or are they owned by other?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Cras vitae ac nunc orci. Purus amet tortor non at pharetra ultrices hendrerit. Eget ac sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            How do you choose the cars that you sell?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Cras vitae ac nunc orci. Purus amet tortor non at pharetra ultrices hendrerit. Eget ac sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            Can I save my favorite cars to a list I can view later?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Cras vitae ac nunc orci. Purus amet tortor non at pharetra ultrices hendrerit. Eget ac sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            Can I be notified when cars I like are added to your inventory?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Cras vitae ac nunc orci. Purus amet tortor non at pharetra ultrices hendrerit. Eget ac sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            What tools do you have to help me find the right car for me and my budget?
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Cras vitae ac nunc orci. Purus amet tortor non at pharetra ultrices hendrerit. Eget ac sit morbi nunc sit id massa. Metus, scelerisque volutpat nec sit vel donec. Sagittis, id volutpat erat vel.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h3 class="footer-logo">BOXCARS</h3>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es.</p>
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <span>📞</span> +76 956 039 999
+                </div>
+                <div class="contact-item">
+                    <span>📧</span> ali@boxcars.com
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Get in Touch</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                    <li><a href="#">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Our Brands</h4>
+                <ul>
+                    <li><a href="#">Toyota</a></li>
+                    <li><a href="#">Porsche</a></li>
+                    <li><a href="#">Audi</a></li>
+                    <li><a href="#">BMW</a></li>
+                    <li><a href="#">Ford</a></li>
+                    <li><a href="#">Nissan</a></li>
+                    <li><a href="#">Peugeot</a></li>
+                    <li><a href="#">Volkswagen</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Vehicles Type</h4>
+                <ul>
+                    <li><a href="#">Sedan</a></li>
+                    <li><a href="#">Hatchback</a></li>
+                    <li><a href="#">SUV</a></li>
+                    <li><a href="#">Hybrid</a></li>
+                    <li><a href="#">Electric</a></li>
+                    <li><a href="#">Coupe</a></li>
+                    <li><a href="#">Truck</a></li>
+                    <li><a href="#">Convertible</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-right">
+            <h4>Join BoxCar</h4>
+            <p>Receive pricing updates, shopping tips & more!</p>
+            <form>
+                <input type="email" placeholder="Your email address">
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="footer-apps">
+                <button>Download on the App Store</button>
+                <button>Get it on Google Play</button>
+            </div>
+            <div class="footer-socials">
+                <span>Follow Us:</span>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 exemple.com. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a> • <a href="#">Privacy Notice</a>
+    </div>
+</footer>
